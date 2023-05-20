@@ -1,4 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/image_1"/>
     <TextView android:id="@+id/walker" android:layout_width="210dp" android:layout_height="45dp" android:fontFamily="@font/roboto_bold" android:text="WALKER’S" android:textStyle="bold" android:textColor="@color/white" android:textSize="35sp" android:layout_marginStart="70dp" android:layout_marginTop="338dp"/>
     <TextView android:layout_width="210dp" android:layout_height="45dp" android:fontFamily="@font/roboto_bold" android:text="HIGH" android:textColor="@color/white" android:textSize="35sp" android:textStyle="bold" android:layout_marginStart="205dp" android:layout_below="@+id/walker"/>
@@ -6,4 +10,9 @@
         <androidx.appcompat.widget.AppCompatButton android:id="@+id/register_btn" android:layout_width="0dp" android:layout_height="55dp" android:layout_weight="1" android:text="register" android:textColor="@color/white" android:fontFamily="@font/roboto_bold" android:textSize="13sp" android:background="@drawable/button_bc"/>
         <androidx.appcompat.widget.AppCompatButton android:id="@+id/login_btn" android:layout_width="0dp" android:layout_height="55dp" android:layout_weight="1" android:text="log in" android:textColor="@color/black" android:fontFamily="@font/roboto_bold" android:textStyle="bold" android:textSize="13sp" android:layout_marginStart="15dp" android:background="@drawable/login_btn_bc"/>
     </LinearLayout>
+
+    <FrameLayout
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    </FrameLayout>
 </RelativeLayout>
