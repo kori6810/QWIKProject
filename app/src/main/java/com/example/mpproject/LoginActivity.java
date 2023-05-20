@@ -72,5 +72,11 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mBtnLogin.setOnClickListener(view->{
+            Intent intent=new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+
+        });
     }
 }

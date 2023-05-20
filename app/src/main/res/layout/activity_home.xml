@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
+    <LinearLayout android:id="@+id/bottom_navigation_view" android:layout_width="match_parent" android:layout_height="65dp" android:orientation="horizontal" android:paddingVertical="15dp" android:paddingHorizontal="20dp" android:weightSum="4" android:elevation="3dp" android:background="@drawable/bottom_view_bc" android:gravity="center" android:layout_alignParentBottom="true" android:layout_marginBottom="40dp" android:layout_marginHorizontal="20dp">
+        <LinearLayout android:id="@+id/home_L" android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center" android:layout_weight="1" android:weightSum="3" android:background="@android:color/transparent">
+            <ImageView android:id="@+id/home_icon" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:layout_marginStart="5dp" android:adjustViewBounds="true" android:src="@drawable/ic_home_off" tools:ignore="NestedWeights"/>
+            <TextView android:id="@+id/home_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Home" android:textSize="13sp" android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/ranking_L" android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center" android:layout_weight="1" android:weightSum="3" android:background="@android:color/transparent">
+            <ImageView android:id="@+id/ranking_icon" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:layout_marginStart="5dp" android:adjustViewBounds="true" android:src="@drawable/ic_ranking" tools:ignore="NestedWeights"/>
+            <TextView android:id="@+id/ranking_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Ranking" android:textSize="13sp" android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/community_L" android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center" android:layout_weight="1" android:weightSum="3" android:background="@android:color/transparent">
+            <ImageView android:id="@+id/community_icon" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:layout_marginStart="5dp" android:adjustViewBounds="true" android:src="@drawable/ic_community_off" tools:ignore="NestedWeights"/>
+            <TextView android:id="@+id/community_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Community" android:textSize="13sp" android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/profile_L" android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center" android:layout_weight="1" android:weightSum="3" android:background="@android:color/transparent">
+            <ImageView android:id="@+id/profile_icon" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:layout_marginStart="5dp" android:adjustViewBounds="true" android:src="@drawable/ic_profile_off" tools:ignore="NestedWeights"/>
+            <TextView android:id="@+id/profile_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Profile" android:textSize="13sp" android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
