@@ -27,6 +27,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
       //  binding.bottomNavigationView.setVisibility(View.GONE);
 
+        binding.bottomNavigationView.setVisibility(View.VISIBLE);
+        binding.homeL.setBackgroundResource(R.drawable.button_bc);
+        binding.homeIcon.setBackgroundResource(R.drawable.ic_home_on);
+        binding.homeText.setVisibility(View.VISIBLE);
 
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
@@ -40,8 +44,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
                 String currentFragment= navController.getCurrentDestination().getLabel().toString();
-                Toast.makeText(HomeActivity.this, currentFragment, Toast.LENGTH_SHORT).show();
-                if (currentFragment.equals("ProfileScreen")){;
+                if (currentFragment.equals("HomeScreen")){;
                     binding.bottomNavigationView.setVisibility(View.VISIBLE);
                     binding.homeL.setBackgroundResource(R.drawable.button_bc);
                     binding.homeIcon.setBackgroundResource(R.drawable.ic_home_on);
