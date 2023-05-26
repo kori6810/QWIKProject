@@ -75,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         mBtnLogin.setOnClickListener(view->{
             Intent intent=new Intent(this, HomeActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
             finish();
 
         });

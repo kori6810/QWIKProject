@@ -70,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
         mBtnRegister.setOnClickListener(view->{
             startActivity(new Intent(this, SignUpFinal.class));
+            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         });
     }
 }

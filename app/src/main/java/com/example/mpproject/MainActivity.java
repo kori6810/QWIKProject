@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        overridePendingTransitionEnter();
         dialog=new BottomSheetDialog(this,R.style.BottomSheetStyle);
         showBottomSheet();
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.loginBtn.setOnClickListener(view->{
             startActivity(new Intent(this,LoginActivity.class));
+            overridePendingTransitionEnter();
         });
 
 
@@ -39,14 +41,24 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
     }
 
+
     private  void showBottomSheet(){
         View dialogView=getLayoutInflater().inflate(R.layout.bottom_sheet,null,false);
         TextView loginBtn=dialogView.findViewById(R.id.login_btn);
+        Button registerBtn=dialogView.findViewById(R.id.register_btn);
         String text="<font color=#000000>Already have an account? </font><font color=#3254CB>LOG IN</font>";
         loginBtn.setText(Html.fromHtml(text));
         loginBtn.setOnClickListener(view->{
             startActivity(new Intent(this,LoginActivity.class));
+            overridePendingTransitionEnter();
+        });
+        registerBtn.setOnClickListener(view->{
+            startActivity(new Intent(this, SetProfileScreen.class));
+            overridePendingTransitionEnter();
         });
         dialog.setContentView(dialogView);
+    }
+    protected void overridePendingTransitionEnter() {
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
     }
 }
